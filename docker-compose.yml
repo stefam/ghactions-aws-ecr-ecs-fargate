@@ -1,0 +1,21 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  webui:
+    image: webui
+    build:
+      context: .
+      dockerfile: web.ui/Dockerfile
+    ports:
+      - 5000:5000
+
+  webapi:
+    image: webapi
+    build:
+      context: .
+      dockerfile: web.ui/Dockerfile
+    ports:
+      - 5023:80
+      - 5024:443

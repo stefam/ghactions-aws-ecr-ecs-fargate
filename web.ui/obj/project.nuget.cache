@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "dgSpecHash": "Iu2zI5t+GZjgTiHbFM15QMkEeZUR31Xlv/ohxSfXwKRzzZF+Xi5SFeGF0BKPfEStENe+8+S8lObIkOYLAWSTVg==",
+  "success": true,
+  "projectFilePath": "C:\\repos\\ghactions-aws-ecr-ecs-fargate\\web.ui\\web.ui.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+}
