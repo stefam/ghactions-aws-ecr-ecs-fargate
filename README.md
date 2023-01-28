@@ -7,6 +7,7 @@ Required
 - docker
 - vs code + docker extension
 
+# Add Services and docker-compose
 1. git clone <repo>
 
 2. cd <repo>

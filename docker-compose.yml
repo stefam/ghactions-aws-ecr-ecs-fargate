@@ -9,13 +9,12 @@ services:
       context: .
       dockerfile: web.ui/Dockerfile
     ports:
-      - 5000:5000
+      - 5000:80
 
   webapi:
     image: webapi
     build:
       context: .
-      dockerfile: web.ui/Dockerfile
+      dockerfile: web.api/Dockerfile
     ports:
-      - 5023:80
-      - 5024:443
+      - 5024:80
