@@ -27,3 +27,6 @@ Required
 9. ctrl + shift + p 
    > Docker: Add Docker Files to Workspace
    > Yes (when asking to create a docker compose file)
+
+
+# docker build -f ./web.api/Dockerfile -t webapi:1.3 .
