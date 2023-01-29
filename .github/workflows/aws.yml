@@ -60,7 +60,7 @@ jobs:
         ls -l
         docker build -f ./web.api/Dockerfile -t webapi:latest .
         docker build -f ./web.ui/Dockerfile -t webui:latest .
-
+        echo uniquenum--$(date +%s)
 
 
 
