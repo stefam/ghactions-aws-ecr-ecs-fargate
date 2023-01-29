@@ -57,13 +57,11 @@ jobs:
     # My test
     - name: Docker compose build and push
       run: |
-        ls -l
-        docker build -f ./web.api/Dockerfile -t webapi:latest .
-        docker build -f ./web.ui/Dockerfile -t webui:latest .
         echo uniquenum--$(date +%s)
-
-
-
+        echo githubcha-${{ github.sha }}
+        #docker build -f ./web.api/Dockerfile -t webapi:latest .
+        #docker build -f ./web.ui/Dockerfile -t webui:latest .
+        
 #    - name: Configure AWS credentials
 #      uses: aws-actions/configure-aws-credentials@v1
 #      with:
