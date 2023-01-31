@@ -47,8 +47,8 @@ This project aims to describe how to create an conteneraized application using d
 
 ## Configure AWS CLI access before creating the AWS container repositories
 `> aws configure` \
-`AWS Access Key ID [None]: xxxxxxxxxx` \
-`AWS Secret Access Key [None]: 52/SFG7mbytRbTeOsDGtypP7U4tPwlFhhMfGWan2` \
+`AWS Access Key ID [None]: xxxxxxxxxxxxxxxx` \
+`AWS Secret Access Key [None]: xxxxxxxxxxxxxxxx` \
 `Default region name [None]: {region}` \
 `Default output format [None]: json`
 
