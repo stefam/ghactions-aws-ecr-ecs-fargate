@@ -4,7 +4,7 @@ version: '3.4'
 
 services:
   webui:
-    image: webui
+    image: 030071829791.dkr.ecr.us-east-1.amazonaws.com/awsexpert:webui
     build:
       context: .
       dockerfile: web.ui/Dockerfile
@@ -12,7 +12,7 @@ services:
       - 5000:80
 
   webapi:
-    image: webapi
+    image: 030071829791.dkr.ecr.us-east-1.amazonaws.com/awsexpert:webapi
     build:
       context: .
       dockerfile: web.api/Dockerfile

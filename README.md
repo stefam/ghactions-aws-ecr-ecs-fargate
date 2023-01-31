@@ -28,20 +28,30 @@ This project aims to describe how to create an conteneraized application using d
 4. cd workflows
 5. echo > aws.yml
 
+## Configure AWS CLI access in order to create AWS Container Registry
+`> aws configure` \
+`AWS Access Key ID [None]: xxxxxxxxxx` \
+`AWS Secret Access Key [None]: 52/SFG7mbytRbTeOsDGtypP7U4tPwlFhhMfGWan2` \
+`Default region name [None]: {region}` \
+`Default output format [None]: json`
+
+
+## Create aws ecr
+1. aws ecr create-repository --repository-name webui
+2. aws ecr create-repository --repository-name webapi
+3. Login docker to the AWS Container Registry: \
+`aws ecr get-login-password --region {region} | docker login --username AWS --password-stdin {aws_account_id}.dkr.ecr.{region}.amazonaws.com`
+
 
 
 
 
 
 # Manual Push of the images to aws ecr
-## Build and list images
+## Build, list and push images to aws ecr
 1. docker compose build
-2. docker image list
+2. aws ecr get-login-password --region {region} | docker login --username AWS --password-stdin {aws_account_id}.dkr.ecr.{region}.amazonaws.com
+3. docker images
+4. docker tag webui {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webui:latest
+5. docker push {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webapi:latest
 
-
-
-
-
-
-
-# docker build -f ./web.api/Dockerfile -t webapi:1.3 .
