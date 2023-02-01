@@ -40,9 +40,13 @@ This project aims to describe how to create an conteneraized application using d
 
 ## Create github actions file structure
 1. `mkdir .github`
+
 2. `cd .github`
+
 3. `mkdir workflows`
+
 4. `cd workflows`
+
 5. `echo > aws.yml`
 
 ## Configure AWS CLI access before creating the AWS container repositories
@@ -55,8 +59,10 @@ This project aims to describe how to create an conteneraized application using d
 ## Create aws ecr
 1. Creates web.ui container registry: \
 `aws ecr create-repository --repository-name webui`
+
 2. Creates web.api container registry: \
 `aws ecr create-repository --repository-name webapi`
+
 3. Login docker to the aws container registry: \
 `aws ecr get-login-password --region {region} | docker login --username AWS --password-stdin {aws_account_id}.dkr.ecr.{region}.amazonaws.com`
 
