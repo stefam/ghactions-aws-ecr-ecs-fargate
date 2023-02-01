@@ -4,6 +4,7 @@ This project aims to describe how to create an conteneraized application using d
 ## Required
 - .NET 6 or greater
 - dotnet cli
+- aws cli
 - Docker engine
 - VS Code + Docker extension
 - GIT
@@ -38,7 +39,7 @@ This project aims to describe how to create an conteneraized application using d
 > Docker: Add Docker Files to Workspace \
 > Yes (when asking to create a docker compose file) \
 
-## Create github actions file structure
+## Create GitHub actions file structure
 1. `mkdir .github`
 
 2. `cd .github`
@@ -56,7 +57,9 @@ This project aims to describe how to create an conteneraized application using d
 `Default region name [None]: {region}` \
 `Default output format [None]: json`
 
-## Create aws ecr
+## Create AWS ECR
+You have to configure your aws cli access first.
+
 1. Creates web.ui container registry: \
 `aws ecr create-repository --repository-name webui`
 
@@ -74,6 +77,7 @@ We can build our images using docker compose: \
 
 ## Tag images
 We can tag our images in different ways.
+
 1. Tag images on the build: \
 `docker build -f ./web.ui/Dockerfile -t {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webui:latest .` \
 `docker build -f ./web.api/Dockerfile -t {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webapi:latest .`
