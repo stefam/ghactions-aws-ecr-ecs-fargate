@@ -67,9 +67,9 @@ This project aims to describe how to create an conteneraized application using d
 3. Login docker to the aws container registry: \
 `aws ecr get-login-password --region {region} | docker login --username AWS --password-stdin {aws_account_id}.dkr.ecr.{region}.amazonaws.com`
 
-# This section shows how to build and push the images manually
+# This section shows how to build, tag and push the images manually
 
-## Build, Tag and Push images
+## Build images
 We can build our images using docker compose: \
 `docker compose build`
 
