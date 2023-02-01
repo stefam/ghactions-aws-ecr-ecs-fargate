@@ -58,8 +58,6 @@ This project aims to describe how to create an conteneraized application using d
 `Default output format [None]: json`
 
 ## Create AWS ECR
-You have to configure your aws cli access first.
-
 1. Creates web.ui container registry: \
 `aws ecr create-repository --repository-name webui`
 
