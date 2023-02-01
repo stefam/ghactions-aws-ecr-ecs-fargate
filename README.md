@@ -77,5 +77,5 @@ We can tag our images in different ways.
 `docker tag webapi {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webapi:latest`
 
 ## Push images
-`docker push {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webui:webapi` \
-`docker push {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webapi:webapi`
+`docker push {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webui:latest` \
+`docker push {aws_account_id}.dkr.ecr.{region}.amazonaws.com/webapi:latest`
